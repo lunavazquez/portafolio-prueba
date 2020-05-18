@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap')
+
+$backgorundColorMiddle: #887F82
+$backgorundColorBottom: #282327
+$whiteColor: #f0f0f0
+$fontFamilyTitle: 'Ubuntu'
+$fontFamilyText: 'Playfair Display'
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  outline: none
+
+.imgContainer
+  // para hacer el contenido flexible
+  display: flex
+  height: 450px
+  width: 100%
+  justify-content: center
+  align-items: flex-end
+  overflow: hidden
+
+.mainImage
+  width: 100%
+
+.middle
+  background-color: $backgorundColorMiddle
+  height: 50vh
+  display: flex
+  align-items: center
+  justify-content: center
+
+.bottom
+  background-color: $backgorundColorBottom
+  height: 50vh
+
+.content
+  background: rgba(44, 42, 50, 0.65)
+  width: 50%
+  height: fit-content
+  margin: 0 auto
+  position: absolute
+  top: 160px
+  box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75)
+  margin-bottom: 100px
+
+.about
+  min-height: 200px
+  width: auto
+  padding: 60px 40px 0
+  color: $whiteColor
+  min-height: 124px
+  margin-bottom: 70px
+  h1
+    font-family: $fontFamilyTitle
+    font-size: 50px
+    font-weight: 700
+    letter-spacing: 2px
+  h4
+    font-family: $fontFamilyText
+    font-size: 35px
+    color: #DF87A0
+    margin: 30px 0
+    letter-spacing: 3px
+  p
+    width: 50%
+    text-align: justify
+    font-family: $fontFamilyTitle
+    line-height: 24px
+
+.socialMedia
+  display: flex
+  width: 30%
+  margin: 30px auto
+  justify-content: space-between
+  float: right
+  align-items: center
+  a
+    &:hover
+      box-shadow: 2px 3px 5px black
+
+.skills
+  min-height: 200px
+  width: auto
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-column-gap: 16px
+  grid-row-gap: 16px
+  padding: 0 20px
+
+.title
+  padding: 10px 40px
+  color: $whiteColor
+  font-family: $fontFamilyTitle
+
+.skill
+  height: 60px
+  display: flex
+  // centra de arriba a abajo
+  align-items: center
+  justify-content: space-around
+
+.projects
+  width: 100%
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-column-gap: 20px
+  align-items: center
+  padding: 20px
+
+// PANTALLA TABLET HORIZONTAL- MEDIUM md
+@media (max-width: 1199px) and (min-width: 992px)
+  .content
+    width: 100%
+
+  .skills
+    grid-template-columns: repeat(1, 1fr)
+
+  .projects
+    width: 80%
+    grid-template-columns: repeat(2, 1fr)
+    padding-left: 90px
+
+  // PANTALLA TABLET - SMALL sm
+@media (max-width: 991px) and (min-width: 768px)
+  .imgContainer
+  // para hacer el contenido flexible
+    display: flex
+    width: 90%
+    justify-content: center
+    align-items: flex-end
+    overflow: hidden
+
+  .content
+    width: 100%
+
+  .about
+    p
+      width: 80%
+
+  .socialMedia
+    a
+      color: $whiteColor
+
+  .skills
+    grid-template-columns: repeat(1, 1fr)
+
+// PANTALLA PHONE - EXTRA SMALL xs
+@media (max-width: 767px)
+  .imgContainer
+  // para hacer el contenido flexible
+    height: 160px
+
+  .about
+    p
+      width: 100%
+  .content
+    width: 100%
+
+  .skills
+    grid-template-columns: repeat(1, 1fr)
